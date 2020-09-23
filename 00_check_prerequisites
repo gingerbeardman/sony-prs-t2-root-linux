@@ -9,7 +9,7 @@ explain "Checking prerequisites.."
 
 check_command minicom
 check_command 7z
-check_command udisks
+check_command udisksctl
 check_command curl
 check_command bspatch
 

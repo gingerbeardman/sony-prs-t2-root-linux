@@ -8,11 +8,11 @@ source ./common.sh
 cd packages
 explain "Downloading packages..."
 
-curl -O "http://projects.mobileread.com/reader/users/porkupan/rupor/ReleasesT2/rescue/20121010/rupor-rescue.7z"
-curl -O "http://projects.mobileread.com/reader/users/porkupan/rupor/ReleasesT2/jailbreak/20121016/rupor-jailbreak.7z"
-curl -O "http://projects.mobileread.com/reader/users/porkupan/rupor/ReleasesT2/20121222/rupor-minimal.7z"
-curl -O "http://projects.mobileread.com/reader/users/porkupan/rupor/ReleasesT2/adb/20121211/rupor-enable-adb.7z"
-curl -O "http://projects.mobileread.com/reader/users/porkupan/rupor/ReleasesT2/apps2sd/20121211/rupor-enable-asec.7z"
+curl -O "https://projects.mobileread.com/reader/users/porkupan/rupor/ReleasesT2/rescue/20121010/rupor-rescue.7z"
+curl -O "https://projects.mobileread.com/reader/users/porkupan/rupor/ReleasesT2/jailbreak/20121016/rupor-jailbreak.7z"
+curl -O "https://projects.mobileread.com/reader/users/porkupan/rupor/ReleasesT2/20130107/rupor-minimal.7z"
+curl -O "https://projects.mobileread.com/reader/users/porkupan/rupor/ReleasesT2/adb/20121211/rupor-enable-adb.7z"
+curl -O "https://projects.mobileread.com/reader/users/porkupan/rupor/ReleasesT2/apps2sd/20121211/rupor-enable-asec.7z"
 
 explain "Checking integrity..."
 md5sum -c ../packages.md5sums

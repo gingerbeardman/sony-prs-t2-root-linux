@@ -13,12 +13,12 @@ abort "Step needs review. Disabled."
 TARGET_DEV=""
 
 for DEV in /dev/sd?; do
-    if udisks --show-info $DEV | grep PRS-T2 >/dev/null; then
+    if udisksctl info -b $DEV | grep PRS-T2 >/dev/null; then
         echo "Reader found but not in recovery mode. Exiting.";
         exit 1
     fi
 
-    if udisks --show-info $DEV | grep PRS-XXX >/dev/null; then
+    if udisksctl info -b $DEV | grep PRS-XXX >/dev/null; then
         TARGET_DEV=$DEV
     fi
 done
@@ -34,7 +34,7 @@ fi
 ############################################################
 # Extra safety checks
 
-if [ ! udisks --show-info $TARGET_DEV | egrep 'count:\s+10$' ]; then
+if [ ! udisksctl info -b $TARGET_DEV | egrep 'count:\s+10$' ]; then
     echo "Partition count differs than expected. Exiting."
     exit 1
 fi
