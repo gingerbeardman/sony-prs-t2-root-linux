@@ -95,6 +95,7 @@ prs_mount_sd() {
     DEV=$(detect_disk_sd) || return 1
 
     udisksctl unmount -b $DEV >/dev/null
+
     udisksctl mount -b $DEV >/dev/null || return 1
     udisksctl info -b $DEV | grep 'MountPoints:' | tr -d ' ' | cut -d: -f2
 }
